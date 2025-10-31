@@ -101,6 +101,7 @@
             this.btnProduccion.TabIndex = 6;
             this.btnProduccion.Text = "Ver Producciòn";
             this.btnProduccion.UseVisualStyleBackColor = true;
+            this.btnProduccion.Click += new System.EventHandler(this.btnProduccion_Click);
             // 
             // btnSalir
             // 
@@ -111,6 +112,7 @@
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblCultivos
             // 
@@ -139,6 +141,7 @@
             this.Controls.Add(this.cboLocalidad);
             this.Name = "frmPrincipal";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

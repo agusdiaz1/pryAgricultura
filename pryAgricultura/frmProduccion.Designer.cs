@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabProdcuccion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -88,16 +88,16 @@
             // 
             // chtLocalidad
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chtLocalidad.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chtLocalidad.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chtLocalidad.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chtLocalidad.Legends.Add(legend3);
             this.chtLocalidad.Location = new System.Drawing.Point(25, 86);
             this.chtLocalidad.Name = "chtLocalidad";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chtLocalidad.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chtLocalidad.Series.Add(series3);
             this.chtLocalidad.Size = new System.Drawing.Size(586, 294);
             this.chtLocalidad.TabIndex = 0;
             this.chtLocalidad.Text = "chart1";
@@ -132,16 +132,16 @@
             // 
             // chtTotal
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chtTotal.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chtTotal.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chtTotal.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chtTotal.Legends.Add(legend4);
             this.chtTotal.Location = new System.Drawing.Point(26, 91);
             this.chtTotal.Name = "chtTotal";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chtTotal.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chtTotal.Series.Add(series4);
             this.chtTotal.Size = new System.Drawing.Size(586, 294);
             this.chtTotal.TabIndex = 1;
             this.chtTotal.Text = "chart1";
@@ -165,6 +165,7 @@
             this.Controls.Add(this.tabProdcuccion);
             this.Name = "frmProduccion";
             this.Text = "Producciòn";
+            this.Load += new System.EventHandler(this.frmProduccion_Load);
             this.tabProdcuccion.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
