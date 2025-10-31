@@ -20,7 +20,7 @@ namespace pryAgricultura
 
         private void frmProduccion_Load(object sender, EventArgs e)
         {
-
+            CargarLocalidades();
         }
 
         public void CargarLocalidades()

@@ -77,7 +77,7 @@ namespace pryAgricultura
 
                         while (lector.Read())
                         {
-                            localidad.Add(lector["Categoria"].ToString());
+                            localidad.Add(lector["Nombre"].ToString());
                         }
                     }
                 }
