@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabProdcuccion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.chtLocalidad = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnGraficar = new System.Windows.Forms.Button();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.cboLocalidad = new System.Windows.Forms.ComboBox();
-            this.chtTotal = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnGraficar = new System.Windows.Forms.Button();
+            this.chtLocalidad = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnGraficarTotal = new System.Windows.Forms.Button();
+            this.chtTotal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabProdcuccion.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtLocalidad)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtTotal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,44 +74,6 @@
             this.tabPage1.Text = "Producciòn por Localidad";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btnGraficarTotal);
-            this.tabPage2.Controls.Add(this.chtTotal);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(640, 400);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Producciòn Total";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // chtLocalidad
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.chtLocalidad.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chtLocalidad.Legends.Add(legend3);
-            this.chtLocalidad.Location = new System.Drawing.Point(25, 86);
-            this.chtLocalidad.Name = "chtLocalidad";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chtLocalidad.Series.Add(series3);
-            this.chtLocalidad.Size = new System.Drawing.Size(586, 294);
-            this.chtLocalidad.TabIndex = 0;
-            this.chtLocalidad.Text = "chart1";
-            // 
-            // btnGraficar
-            // 
-            this.btnGraficar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraficar.Location = new System.Drawing.Point(487, 22);
-            this.btnGraficar.Name = "btnGraficar";
-            this.btnGraficar.Size = new System.Drawing.Size(115, 44);
-            this.btnGraficar.TabIndex = 5;
-            this.btnGraficar.Text = "Graficar";
-            this.btnGraficar.UseVisualStyleBackColor = true;
-            // 
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
@@ -130,21 +92,44 @@
             this.cboLocalidad.Size = new System.Drawing.Size(249, 21);
             this.cboLocalidad.TabIndex = 6;
             // 
-            // chtTotal
+            // btnGraficar
+            // 
+            this.btnGraficar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficar.Location = new System.Drawing.Point(487, 22);
+            this.btnGraficar.Name = "btnGraficar";
+            this.btnGraficar.Size = new System.Drawing.Size(115, 44);
+            this.btnGraficar.TabIndex = 5;
+            this.btnGraficar.Text = "Graficar";
+            this.btnGraficar.UseVisualStyleBackColor = true;
+            this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click);
+            // 
+            // chtLocalidad
             // 
             chartArea4.Name = "ChartArea1";
-            this.chtTotal.ChartAreas.Add(chartArea4);
+            this.chtLocalidad.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
-            this.chtTotal.Legends.Add(legend4);
-            this.chtTotal.Location = new System.Drawing.Point(26, 91);
-            this.chtTotal.Name = "chtTotal";
+            this.chtLocalidad.Legends.Add(legend4);
+            this.chtLocalidad.Location = new System.Drawing.Point(25, 86);
+            this.chtLocalidad.Name = "chtLocalidad";
             series4.ChartArea = "ChartArea1";
             series4.Legend = "Legend1";
             series4.Name = "Series1";
-            this.chtTotal.Series.Add(series4);
-            this.chtTotal.Size = new System.Drawing.Size(586, 294);
-            this.chtTotal.TabIndex = 1;
-            this.chtTotal.Text = "chart1";
+            this.chtLocalidad.Series.Add(series4);
+            this.chtLocalidad.Size = new System.Drawing.Size(586, 294);
+            this.chtLocalidad.TabIndex = 0;
+            this.chtLocalidad.Text = "chart1";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnGraficarTotal);
+            this.tabPage2.Controls.Add(this.chtTotal);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(640, 400);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Producciòn Total";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnGraficarTotal
             // 
@@ -155,6 +140,23 @@
             this.btnGraficarTotal.TabIndex = 6;
             this.btnGraficarTotal.Text = "Graficar";
             this.btnGraficarTotal.UseVisualStyleBackColor = true;
+            this.btnGraficarTotal.Click += new System.EventHandler(this.btnGraficarTotal_Click);
+            // 
+            // chtTotal
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chtTotal.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chtTotal.Legends.Add(legend3);
+            this.chtTotal.Location = new System.Drawing.Point(26, 91);
+            this.chtTotal.Name = "chtTotal";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chtTotal.Series.Add(series3);
+            this.chtTotal.Size = new System.Drawing.Size(586, 294);
+            this.chtTotal.TabIndex = 1;
+            this.chtTotal.Text = "chart1";
             // 
             // frmProduccion
             // 
@@ -169,8 +171,8 @@
             this.tabProdcuccion.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chtLocalidad)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chtTotal)).EndInit();
             this.ResumeLayout(false);
 

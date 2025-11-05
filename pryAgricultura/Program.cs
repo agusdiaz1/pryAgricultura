@@ -7,7 +7,7 @@ using pryAgricultura;
 
 namespace pryAgricultura
 {
-    internal class Program
+    internal static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.

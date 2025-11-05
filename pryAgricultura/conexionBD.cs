@@ -27,8 +27,8 @@ namespace pryAgricultura
             {
                 conexion.Open();
                 OleDbCommand comando = new OleDbCommand(consulta, conexion);
-                
-                
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(comando);
+                adaptador.Fill(tabla);
             }
             catch (Exception ex)
             {
@@ -40,6 +40,7 @@ namespace pryAgricultura
             }
             return tabla;
         }
+
 
 
         public void EjecutarComando(string comandoAcc)
@@ -118,6 +119,44 @@ namespace pryAgricultura
             }
 
             return cultivo;
+        }
+
+        public DataTable ObtenerProduccionPorLocalidad(string nombreLocalidad)
+        {
+            string sql = @"SELECT C.Nombre AS Cultivo, P.Produccion
+                       FROM (Produccion AS P 
+                       INNER JOIN Localidades AS L ON P.Localidad = L.Id)
+                       INNER JOIN Cultivos AS C ON P.Cultivo = C.Id
+                       WHERE L.Nombre = @Localidad";
+
+            DataTable tabla = new DataTable();
+            try
+            {
+                conexion.Open();
+                OleDbCommand comando = new OleDbCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@Localidad", nombreLocalidad);
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(comando);
+                adaptador.Fill(tabla);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener producción: " + ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return tabla;
+        }
+
+        public DataTable ObtenerProduccionTotal()
+        {
+            string sql = @"SELECT L.Nombre AS Localidad, SUM(P.Produccion) AS TotalProduccion
+                       FROM Produccion AS P 
+                       INNER JOIN Localidades AS L ON P.Localidad = L.Id
+                       GROUP BY L.Nombre";
+
+            return EjecutarConsulta(sql);
         }
     }
 }
